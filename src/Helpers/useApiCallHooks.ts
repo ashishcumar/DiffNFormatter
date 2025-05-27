@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-// const baseUrl = "https://diffnformatter-be.onrender.com/api";
-const baseUrl = "http://localhost:8000/api";
+const baseUrl = "https://diffnformatter-be.onrender.com/api";
+// const baseUrl = "http://localhost:8000/api";
 const endpoints = {
   diff: "/diff/",
   format: "/format/",
