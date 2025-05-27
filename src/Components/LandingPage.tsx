@@ -17,6 +17,7 @@ function LandingPage() {
       alignItems="center"
       justifyContent="center"
       px={4}
+      scrollSnapAlign="start"
     >
       {/* Blurred Circular Background */}
       <Box
@@ -24,7 +25,7 @@ function LandingPage() {
         top="50%"
         left="50%"
         transform="translate(-50%, -50%)"
-        width={{base:"100%",md:"500px"}}
+        width={{ base: "100%", md: "500px" }}
         height="500px"
         borderRadius="full"
         bg="#ceeedf"

@@ -33,10 +33,12 @@ const DiffChecker = () => {
     <VStack
       spacing={6}
       w="100%"
-      p={{base:6,md:12}}
+      p={{ base: 6, md: 12 }}
       bg="grey"
       id="diff-checker"
-      minHeight={"100dvh"}
+      height={"100dvh"}
+      scrollSnapAlign="start"
+      overflow={'scroll'}
     >
       <Heading size="lg" mb={2} mt={2} color={"black"}>
         Diff Checker
@@ -88,6 +90,9 @@ const DiffChecker = () => {
         onClick={handleCompare}
         isLoading={loading}
         loadingText="Comparing"
+        sx={{
+          padding:2
+        }}
       >
         Compare
       </Button>
@@ -99,8 +104,9 @@ const DiffChecker = () => {
           borderWidth="1px"
           borderRadius="md"
           bg={"white"}
-          maxHeight={"500px"}
-          overflow={"scroll"}
+          // minHeight={"300px"}
+          height={'fit-content'}
+          // overflow={"scroll"}
         >
           <DiffViewer diffHtml={diffHtml} />
         </Box>

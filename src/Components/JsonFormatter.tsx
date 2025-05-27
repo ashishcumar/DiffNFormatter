@@ -56,6 +56,7 @@ const JsonFormatter = () => {
       p={{ base: 6, md: 12 }}
       height="100dvh"
       id="json-formatter"
+      scrollSnapAlign="start"
     >
       <Heading size="lg" mb={2} mt={2} color={"black"}>
         JSON Formatter

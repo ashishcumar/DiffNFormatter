@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Box,
   Heading,
@@ -23,6 +22,7 @@ const ToolsShowcase = () => {
       px={4}
       height={"100dvh"}
       placeContent={"center"}
+       scrollSnapAlign="start"
     >
       <Box textAlign="center" maxW="4xl" mx="auto" mb={12}>
         <Heading size={{ base: "lg", md: "xl" }} mb={4} color="textcolor">

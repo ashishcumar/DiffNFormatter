@@ -10,14 +10,15 @@ const DiffViewer: React.FC<DiffViewerProps> = ({ diffHtml, isLeft }) => {
     <div
       style={{
         whiteSpace: "pre-wrap",
-        fontFamily: "'Fira Code', monospace", // or use theme `mono` class if Chakra is applied
-        fontSize: "12px", // consistent and compact
+        fontFamily: "'Fira Code', monospace",
+        fontSize: "12px", 
         fontWeight: 400,
         lineHeight: "1.6",
         backgroundColor: "#f9f9f9",
         padding: "1rem",
         borderRadius: "8px",
         overflowX: "auto",
+        height:'100%'
       }}
       className={
         isLeft
