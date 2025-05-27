@@ -39,7 +39,7 @@ const DiffChecker = () => {
       minHeight={"100dvh"}
       scrollSnapAlign="start"
       overflow={"scroll"}
-      display={{ base: 'none', md: 'block'}}
+      display={{ base: 'none', md: 'flex'}}
     >
       <Heading size="lg" mb={2} mt={2} color={"black"}>
         Diff Checker
@@ -93,6 +93,8 @@ const DiffChecker = () => {
         loadingText="Comparing"
         sx={{
           padding: 2,
+          margin:'auto'
+
         }}
       >
         Compare
