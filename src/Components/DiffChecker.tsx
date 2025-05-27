@@ -39,6 +39,7 @@ const DiffChecker = () => {
       minHeight={"100dvh"}
       scrollSnapAlign="start"
       overflow={"scroll"}
+      display={{ base: 'none', md: 'block'}}
     >
       <Heading size="lg" mb={2} mt={2} color={"black"}>
         Diff Checker
@@ -62,7 +63,8 @@ const DiffChecker = () => {
             p: 3,
           }}
           sx={{
-            minHeight: { base: "50dvh", md: "70dvh" },
+            minHeight: { md: "70dvh" },
+            height: { base: "40dvh" },
           }}
         />
 
@@ -78,7 +80,8 @@ const DiffChecker = () => {
             p: 3,
           }}
           sx={{
-            height: { base: "50dvh", md: "70dvh" },
+            minHeight: { md: "70dvh" },
+            height: { base: "40dvh" },
           }}
         />
       </Grid>
