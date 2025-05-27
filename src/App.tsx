@@ -5,21 +5,23 @@ import LandingPage from "./Components/LandingPage";
 import ToolsShowcase from "./Components/ToolsShowcase";
 
 function App() {
-  // DiffNFormatter
   return (
-    <Grid
-      sx={{
-        overflowY: "scroll",
-        scrollSnapType: "y mandatory",
-        scrollBehavior: "smooth",
-        height: "100vh",
-      }}
-    >
-      <LandingPage />
-      <ToolsShowcase />
-      <DiffChecker />
-      <JsonFormatter />
-    </Grid>
+    <>
+      <Grid
+        sx={{
+          overflowY: "scroll",
+          scrollSnapType: "y mandatory",
+          scrollBehavior: "smooth",
+          height: "100vh",
+        }}
+      >
+        <LandingPage />
+        <ToolsShowcase />
+        <DiffChecker />
+        <JsonFormatter />
+      </Grid>
+      {/* <Footer /> */}
+    </>
   );
 }
 

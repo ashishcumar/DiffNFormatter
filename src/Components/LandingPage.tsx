@@ -1,4 +1,12 @@
-import { Box, Button, Heading, Stack, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Heading,
+  Link,
+  Stack,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 
 function LandingPage() {
   const scrollToSection = (id: string) => {
@@ -68,6 +76,25 @@ function LandingPage() {
           </Button>
         </Stack>
       </VStack>
+      <Text
+        fontSize="sm"
+        color="gray.500"
+        position="absolute"
+        bottom="12px"
+        w="100%"
+        textAlign="center"
+        zIndex={1}
+      >
+        Built with ❤️ by{" "}
+        <Link
+          href="https://www.linkedin.com/in/ashish-cumar/"
+          isExternal
+          color="teal.500"
+          fontWeight="medium"
+        >
+          Ashish
+        </Link>
+      </Text>
     </Box>
   );
 }

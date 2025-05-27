@@ -109,7 +109,7 @@ const JsonFormatter = () => {
               p: 3,
               borderColor: "gray.300",
               color: formattedJson == "invalid json" ? "red" : "",
-              overflowY: "auto",
+              overflow: "scroll",
               transition: "all 0.4 ease-in",
             }}
           />

@@ -36,7 +36,7 @@ const DiffChecker = () => {
       p={{ base: 6, md: 12 }}
       bg="grey"
       id="diff-checker"
-      height={"100dvh"}
+      minHeight={"100dvh"}
       scrollSnapAlign="start"
       overflow={"scroll"}
     >
@@ -59,11 +59,10 @@ const DiffChecker = () => {
             fontSize: "sm",
             fontFamily: "mono",
             fontWeight: "normal",
-            height: "70dvh",
             p: 3,
           }}
           sx={{
-            height: { base: "50dvh", md: "70dvh" },
+            minHeight: { base: "50dvh", md: "70dvh" },
           }}
         />
 
@@ -73,7 +72,6 @@ const DiffChecker = () => {
           textAreaProps={{
             placeholder: "Enter modified text...",
             bg: "white",
-            height: "70dvh",
             fontSize: "sm",
             fontFamily: "mono",
             fontWeight: "normal",
@@ -104,9 +102,7 @@ const DiffChecker = () => {
           borderWidth="1px"
           borderRadius="md"
           bg={"white"}
-          // minHeight={"300px"}
           height={"fit-content"}
-          // overflow={"scroll"}
           id="diffViewer"
         >
           <DiffViewer diffHtml={diffHtml} />

@@ -1,14 +1,19 @@
-import { Grid, Textarea, type SystemStyleObject, type TextareaProps } from "@chakra-ui/react";
+import {
+  Grid,
+  Textarea,
+  type SystemStyleObject,
+  type TextareaProps,
+} from "@chakra-ui/react";
 
 interface IProps {
   value: string;
   setValue: (e: string) => void;
   textAreaProps?: TextareaProps;
-  sx?: SystemStyleObject | undefined
+  sx?: SystemStyleObject | undefined;
 }
 
 function TextArea(props: IProps) {
-  const { setValue, value, textAreaProps } = props;
+  const { setValue, value, textAreaProps, sx } = props;
   return (
     <Grid>
       <Textarea
@@ -22,6 +27,7 @@ function TextArea(props: IProps) {
             border: "1px solid #99e3c7",
             outline: "none",
           },
+          ...sx,
         }}
       />
     </Grid>
