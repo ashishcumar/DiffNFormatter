@@ -13,6 +13,13 @@ const DiffChecker = () => {
   const toast = useToast();
   const { getDiff, loading } = useApiCallHooks();
 
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const handleCompare = async () => {
     if (!leftText || !rightText) {
       toast({
@@ -25,6 +32,7 @@ const DiffChecker = () => {
       return;
     }
     const res = await getDiff(leftText, rightText);
+    scrollToSection("diffViewer");
     setDiffHtml(res);
     setShowDiff(true);
   };
@@ -38,7 +46,7 @@ const DiffChecker = () => {
       id="diff-checker"
       height={"100dvh"}
       scrollSnapAlign="start"
-      overflow={'scroll'}
+      overflow={"scroll"}
     >
       <Heading size="lg" mb={2} mt={2} color={"black"}>
         Diff Checker
@@ -91,7 +99,7 @@ const DiffChecker = () => {
         isLoading={loading}
         loadingText="Comparing"
         sx={{
-          padding:2
+          padding: 2,
         }}
       >
         Compare
@@ -105,8 +113,9 @@ const DiffChecker = () => {
           borderRadius="md"
           bg={"white"}
           // minHeight={"300px"}
-          height={'fit-content'}
+          height={"fit-content"}
           // overflow={"scroll"}
+          id="diffViewer"
         >
           <DiffViewer diffHtml={diffHtml} />
         </Box>
