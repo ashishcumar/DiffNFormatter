@@ -13,13 +13,6 @@ const DiffChecker = () => {
   const toast = useToast();
   const { getDiff, loading } = useApiCallHooks();
 
-  const scrollToSection = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   const handleCompare = async () => {
     if (!leftText || !rightText) {
       toast({
@@ -32,7 +25,6 @@ const DiffChecker = () => {
       return;
     }
     const res = await getDiff(leftText, rightText);
-    scrollToSection("diffViewer");
     setDiffHtml(res);
     setShowDiff(true);
   };
